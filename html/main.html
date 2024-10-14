@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>💯🙂💯</title>
+  <link rel="stylesheet" type="text/css" href="../css/css.css" />
+  <audio id="audio" autoplay loop>
+    <source src="../music/主页.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      let audio = document.getElementById('audio');
+      let context = new AudioContext();
+
+      let source = context.createMediaElementSource(audio);
+      source.connect(context.destination);
+
+      audio.play();
+    });
+    function 主页() {
+      setTimeout(function () {
+        window.location.href = "main.html";
+      }, 200); // 延时时间为2秒（2000毫秒）
+    }
+    function 学习() {
+      setTimeout(function () {
+        window.location.href = "learn.html";
+      }, 200); // 延时时间为2秒（2000毫秒）
+    }
+    function 空间() {
+      setTimeout(function () {
+        window.location.href = "photo.html";
+      }, 200); // 延时时间为2秒（2000毫秒）
+    }
+    function 致言() {
+      setTimeout(function () {
+        window.location.href = "homage.html";
+      }, 200); // 延时时间为2秒（2000毫秒）
+    }
+    function 注册() {
+      setTimeout(function () {
+        window.location.href = "表单.html";
+      }, 200); // 延时时间为2秒（2000毫秒）
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <video id="video-background" src="../img/背景.mp4" autoplay muted loop></video>
+  <table class="page">
+    <td>
+      <table>
+        <tr>
+          <td style="height: 50px;">
+            <span style="font-size: 30px; font-family: 微软雅黑; font-weight: bold;">
+              <button class="main">💯My website💯</button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table style="height: 30vw;">
+              <tr>
+                <td>
+                  <table class=" back" style="width: 11vw;">
+                    <tr>
+                      <td class="top">
+                        <button class="current">
+                          主页
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="top">
+                        <button onclick="setTimeout(学习, 300)" class="left_top">
+                          学习
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="top">
+                        <button onclick="setTimeout(空间, 300)" class="left_top">
+                          空间
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="top">
+                        <button onclick="setTimeout(致言, 300)" class="left_top">
+                          致言
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="top">
+                        <button onclick="setTimeout(注册, 300)" class="注册">
+                          加入
+                        </button>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td>
+                  <table style="width: 100%;height: 30vw;">
+                    <tr>
+                      <td rowspan="2" style="width: 34vw;">
+                        <img src="../img/02.png" class="yyds">
+                      </td>
+                      <td>
+                        <table class=" back" style="width: 56vw;height: 28vw;">
+                          <td>
+                            <span style="font-weight: bold; font-size: 3vw;">🧑‍🎓简介🧑‍🎓</span><br /><br />
+                            <span style="font-size: 2vw;font-weight: bold; color: rgba(0, 0, 0,0.8);">
+                              XIAOCRQ
+                            </span>
+                          </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span style="font-weight: bold; font-size: 3vw;">🧑‍💻爱好🧑‍💻</span><br /><br />
+                        <span style="font-size: 2vw;font-weight: bold; color: rgba(0, 0, 0,0.8);">
+                          程序猿
+                        </span>
+                      </td>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </table>
+</body>
+
+</html>

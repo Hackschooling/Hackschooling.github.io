@@ -1,0 +1,234 @@
+from {
+  font-family: 等线;
+  font-weight: bold;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 禁止内容溢出时出现滚动条 */
+}
+
+body,html{
+  background-color: rgb(2, 158, 255,1);
+  transition: background-color 0.75s,opacity 0.5s ease;
+}
+
+body::after {
+  content: '欢迎';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.75s ease, font-size 0.75s ease ,color 0.5s ease; /* 添加过渡效果 */
+  pointer-events: none; /* 防止文字干扰其他元素的交互 */
+  z-index: 1; /* 将文字置于背景后方 */
+}
+
+body:hover::after {
+  opacity: 0;
+  font-size: 1vw;
+  color: rgba(0, 0, 0, 0);
+}
+
+body:hover{
+  background-color: rgb(2, 158, 255,0);
+}
+
+th,
+td {
+  border: 0px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.page{
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.page:hover{
+  transition: opacity 0.75s;
+  opacity: 1;
+}
+
+.top {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 1vw;
+}
+
+input {
+  font-family: 等线;
+  font-weight: bold;
+  border-radius: 1vw;
+  border: none;
+  cursor: pointer;
+}
+.按钮 {
+  text-align: center;
+  width: 9vw;
+  height: 4vw;
+  border-radius: 5vw;
+  font-size: 2vw;
+  border-width: 0;
+  background-color: rgb(0, 179, 255);
+  color: white;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.125s;
+  transition: width 0.125s, height 0.125s;
+}
+.按钮:hover {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  width: 9.5vw;
+  height: 4.5vw;
+}
+.图标 {
+  display: inline-block;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 15px;
+  border: none;
+  background-image: url(../img/02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.125s;
+}
+.图标:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+.标签单元格 {
+  width: 8vw;
+  height: 3vw;
+}
+.内容单元格 {
+  font-size: 1.5vw;
+  font-weight:200;
+  height: 5vw;
+  padding: 0px;
+}
+.班级{  
+  font-size: 1.5vw;
+  font-weight:200;
+  width: 25vw;
+  height: 3vw;
+  border-radius: 2vw;
+  border: 0;
+  padding: 0px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: width 0.125s, height 0.125s;
+}
+.班级:hover{
+  width: 26vw;
+  height: 3.5vw;
+  border-radius: 2vw;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.班级:active {
+  height: 4vw;
+  border-radius: 2vw;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.内容 {
+  width: 25vw;
+  height: 3vw;
+  border-radius: 2vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: width 0.125s, height 0.125s;
+}
+.内容:hover {
+  width: 26vw;
+  height: 3.5vw;
+  border-radius: 2vw;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.内容:active {
+  width: 27vw;
+  height: 4vw;
+  border-radius: 2vw;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.标题 {
+  font-size: 3vw;
+  font-weight: bold;
+  width: 20vw;
+  height: 5vw;
+}
+.标签 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 8vw;
+  height: 3vw;
+  border-radius: 10vw;
+  border-width: 0;
+  pointer-events: none;
+}
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+.back {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 3vw;
+}
+.简介 {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1vw;
+  border: none;
+  width: 90%;
+  height: 25vw;
+  font-size: 1.5vw;
+  transition: width 0.125s, height 0.125s;
+}
+.选择 {
+  transform: scale(2); /* 将复选框水平和垂直方向上放大为原来的1.5倍 */
+}
+.next {
+  text-align: center;
+  width: 9vw;
+  height: 4vw;
+  border-radius: 5vw;
+  font-size: 2vw;
+  border-width: 0;
+  background-color: rgb(0, 179, 255);
+  color: white;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.125s;
+  transition: width 0.125s, height 0.125s;
+}
+.next:hover {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  width: 9.5vw;
+  height: 4.5vw;
+}
+.next:focus {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  width: 125vw;
+  height: 90vw;
+  background-color: rgb(0, 179, 255);
+  color: rgba(0, 0, 0, 0);
+  transition: font-size 0.4s, width 0.4s, height 0.4s, background-color 0.4s,
+    color 0.4s;
+}
