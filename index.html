@@ -1,41 +1,25 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
 
 <head>
-  <meta charset="UTF-8" />
-  <title>🙂欢迎🙂</title>
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <audio id="audio" autoplay loop>
-    <source src="music/背景.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      let audio = document.getElementById('audio');
-      let context = new AudioContext();
-      let source = context.createMediaElementSource(audio);
-      source.connect(context.destination);
-      audio.play();
-    });
-    function next() {
-      let button = document.querySelector('button');
-      button.innerHTML = "启动！"; // 点击后更改按钮文字
-      setTimeout(function () {
-        window.location.href = "html/main.html";
-      }, 500); // 延时时间为0.2秒（200毫秒）
-    }
-  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link href="css/style.css" rel="stylesheet" />
+  <title>Markdown File Viewer</title>
+  <!-- 本地marked库 -->
+  <!-- <script src="js/marked.js" defer></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
-  <video id="video-background" src="img/表单背景.mp4" autoplay muted loop></video>
-  <table>
-    <td>
-      <button onclick="next()">
-        原神<br />
-      </button>
-    </td>
-  </table>
+  <div id="mark_view">
+    开发者简介
+  </div>
+  <div id="mark_list">
+    没有markdown文档
+  </div>
+
 </body>
 
 </html>
